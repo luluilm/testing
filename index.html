@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produk Bank Kalteng</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="icon" type="image/png" href="icon-bank-kalteng.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="watermark">
+    creator : helloluluilm@gmail.com
+  </div>
+
+  <header>
+    <img src="logo-bank-kalteng.png" alt="Logo Bank Kalteng">
+  </header>
+
+  <main>
+    <div id="page-beranda" class="page active">
+      <h2>Pilih Kategori Produk</h2>
+      <div class="button-group">
+        <button class="button" onclick="showPage('page-perorangan')">
+          <i class="fas fa-user"></i> Produk Perorangan
+        </button>
+        <button class="button" onclick="showPage('page-nonperorangan')">
+          <i class="fas fa-building"></i> Produk Non-perorangan
+        </button>
+        <button class="button" onclick="showPage('page-atm-bersama')">
+          <i class="fas fa-money-check-alt"></i> ATM Bersama
+        </button>
+      </div>
+    </div>
+
+    <div id="page-perorangan" class="page">
+      <h2>Produk Perorangan</h2>
+      <div class="button-group">
+        <button class="button" onclick="showPage('page-simpanan-perorangan')">
+          <i class="fas fa-wallet"></i> Simpanan
+        </button>
+        <button class="button" onclick="showPage('page-pinjaman-perorangan')">
+          <i class="fas fa-hand-holding-usd"></i> Pinjaman
+        </button>
+        <button class="button" onclick="showPage('page-lainnya-perorangan')">
+          <i class="fas fa-ellipsis-h"></i> Lainnya
+        </button>
+      </div>
+      <button class="button back-button" onclick="showPage('page-beranda')">
+        <i class="fas fa-arrow-left"></i> Kembali ke Beranda
+      </button>
+    </div>
+
+    <div id="page-nonperorangan" class="page">
+      <h2>Produk Non-perorangan</h2>
+      <div class="button-group">
+        <button class="button" onclick="showPage('page-simpanan-nonperorangan')">
+          <i class="fas fa-university"></i> Simpanan
+        </button>
+        <button class="button" onclick="showPage('page-pinjaman-nonperorangan')">
+          <i class="fas fa-briefcase"></i> Pinjaman
+        </button>
+        <button class="button" onclick="showPage('page-lainnya-nonperorangan')">
+          <i class="fas fa-ellipsis-h"></i> Lainnya
+        </button>
+      </div>
+      <button class="button back-button" onclick="showPage('page-beranda')">
+        <i class="fas fa-arrow-left"></i> Kembali ke Beranda
+      </button>
+    </div>
+
+    <div id="page-simpanan-perorangan" class="page">
+      <h2>Simpanan Perorangan</h2>
+      <div class="button-group">
+        <button class="button" onclick="showPage('page-tabungan-simpeda-detail')">Tabungan Simpeda</button>
+        <button class="button" onclick="showPage('page-tabungan-taheta-detail')">Tabungan Taheta</button>
+        <button class="button" onclick="showPage('page-tabungan-tabunganku-detail')">TabunganKu</button>
+        <button class="button" onclick="showPage('page-tabungan-simpel-detail')">Tabungan SimPel</button>
+        <button class="button" onclick="showPage('page-tabungan-tabe-detail')">TABE (Tabungan Berkah)</button>
+        <button class="button" onclick="showPage('page-tabungan-berjangka-detail')">Tabungan Berjangka</button>
+        <button class="button" onclick="showPage('page-taheta-berjangka-simuda-detail')">Taheta Berjangka SiMuda</button>
+        <button class="button" onclick="showPage('page-taheta-gift-detail')">Taheta Gift</button>
+        <button class="button" onclick="showPage('page-deposito-berjangka-detail')">Deposito Berjangka</button>
+        <button class="button" onclick="showPage('page-deposito-fleksibel-detail')">Deposito Fleksibel</button>
+        <button class="button" onclick="showPage('page-deposito-on-call-detail')">Deposito On Call (DOC)</button>
+      </div>
+      <button class="button back-button" onclick="showPage('page-perorangan')">
+        <i class="fas fa-arrow-left"></i> Kembali ke Simpanan Perorangan
+      </button>
+    </div>
+
+    <div id="page-pinjaman-perorangan" class="page">
+      <h2>Pinjaman Perorangan</h2>
+      <div class="button-group">
+        <button class="button" onclick="showPage('page-kpr-umum-detail')">KPR Umum</button>
+        <button class="button" onclick="showPage('page-kpr-bersubsidi-detail')">KPR Bersubsidi</button>
+      </div>
+      <button class="button back-button" onclick="showPage('page-perorangan')">
+        <i class="fas fa-arrow-left"></i> Kembali ke Pinjaman Perorangan
+      </button>
+    </div>
+
+    <div id="page-lainnya-perorangan" class="page">
+      <h2>Lainnya Perorangan</h2>
+      <div class="button-group">
+          <button class="button" onclick="showPage('page-jasa-giro-perusahaan-lainnya-perorangan-detail')">Jasa Giro (Perusahaan Lainnya)</button>
+          <button class="button" onclick="showPage('page-laku-pandai-detail')">LAKU PANDAI</button>
+          <button class="button" onclick="showPage('page-sms-banking-detail')">SMS BANKING</button>
+          <button class="button" onclick="showPage('page-mobile-banking-detail')">MOBILE BANKING</button>
+          <button class="button" onclick="showPage('page-umum-perorangan-detail')">Umum</button>
+      </div>
+      <button class="button back-button" onclick="showPage('page-perorangan')">
+        <i class="fas fa-arrow-left"></i> Kembali ke Produk Perorangan
+      </button>
+    </div>
+
+    <div id="page-simpanan-nonperorangan" class="page">
+      <h2>Simpanan Non-perorangan</h2>
+      <div class="button-group">
+        <button class="button" onclick="showPage('page-jasa-giro-pemda-detail')">Jasa Giro (Pemda/Badan-badan Lainnya)</button>
+        <button class="button" onclick="showPage('page-jasa-giro-perusahaan-lainnya-nonperorangan-detail')">Jasa Giro (Perusahaan Lainnya)</button>
+        <button class="button" onclick="showPage('page-jasa-giro-antar-bank-detail')">Jasa Giro (Antar Bank)</button>
+        <button class="button" onclick="showPage('page-deposito-berjangka-pemda-detail')">Deposito Berjangka (Pemerintah Daerah)</button>
+        <button class="button" onclick="showPage('page-deposito-on-call-pemda-detail')">Deposito On Call (DOC) (Pemerintah Daerah)</button>
+        <button class="button" onclick="showPage('page-deposito-doc-antar-bank-detail')">Deposito dan DOC Antar Bank</button>
+        <button class="button" onclick="showPage('page-tabungan-taheta-bantuan-sosial-detail')">Tabungan Taheta Khusus Bantuan Sosial</button>
+      </div>
+      <button class="button back-button" onclick="showPage('page-nonperorangan')">
+        <i class="fas fa-arrow-left"></i> Kembali ke Produk Non-perorangan
+      </button>
+    </div>
+
+    <div id="page-pinjaman-nonperorangan" class="page">
+      <h2>Pinjaman Non-perorangan</h2>
+      <div class="button-group">
+        <button class="button" onclick="showPage('page-pembukaan-kredit-mikro-detail')">Pembukaan Kredit Mikro (Laku Pandai)</button>
+      </div>
+      <button class="button back-button" onclick="showPage('page-nonperorangan')">
+        <i class="fas fa-arrow-left"></i> Kembali ke Produk Non-perorangan
+      </button>
+    </div>
+
+    <div id="page-lainnya-nonperorangan" class="page">
+      <h2>Lainnya Non-perorangan</h2>
+      <div class="button-group">
+          <button class="button" onclick="showPage('page-giro-nonperorangan-detail')">GIRO</button>
+          <button class="button" onclick="showPage('page-transfer-nonperorangan-detail')">TRANSFER</button>
+          <button class="button" onclick="showPage('page-pembayaran-multibiller-atm-detail')">Pembayaran Multibiller Melalui ATM</button>
+          <button class="button" onclick="showPage('page-pembayaran-multibiller-teller-detail')">Pembayaran Multibiller Melalui UI Counter Teller</button>
+          <button class="button" onclick="showPage('page-perlakuan-khusus-detail')">Perlakuan Khusus</button>
+          <button class="button" onclick="showPage('page-umum-nonperorangan-detail')">Umum</button>
+      </div>
+      <button class="button back-button" onclick="showPage('page-nonperorangan')">
+        <i class="fas fa-arrow-left"></i> Kembali ke Produk Non-perorangan
+      </button>
+    </div>
+
+    <div id="page-tabungan-simpeda-detail" class="page">
+      <h2>Tabungan Simpeda</h2>
+      <div class="product-description">
+        <h3>Detail Biaya dan Saldo:</h3>
+        <ul>
+          <li>Suku Bunga per Tahun:
+            <ul>
+              <li>Nominal 0 - &lt; Rp50 Ribu: 0%</li>
+              <li>Nominal &ge; Rp50 Ribu - &lt; Rp10 juta: 1,00%</li>
+              <li>Nominal &ge; Rp10 juta - &lt; Rp50 juta: 1,00%</li>
+              <li>Nominal &ge; Rp50 juta - &lt; Rp1 Miliar: 1,25%</li>
+              <li>Nominal &ge; Rp1 Miliar: 1,50%</li>
+              <li>Bunga Tabungan yang tidak diberikan berdasarkan peraturan pemerintah: 0%</li>
+            </ul>
+          </li>
+          <li>Saldo Minimal: Rp50.000,-</li>
+          <li>Administrasi Rekening per bulan: Rp10.000,-</li>
+          <li>Administrasi Rekening Khusus Pensiunan (gaji disalurkan via PT Bank Kalteng): Rp6.750,-/bulan</li>
+          <li>Penalti Saldo Minimal per bulan (saldo &lt; Rp50.000): Rp5.000,-/bulan</li>
+          <li>Penalti Saldo Minimal per bulan (saldo &lt; Rp50.000,- selama 3 bulan berturut-turut): Rp7.500,-/bulan</li>
+          <li>Penggantian Buku (penuh/rusak/hilang): Rp7.500,-/buku</li>
+          <li>Biaya Penutupan Rekening: Rp10.000,-/rekening</li>
+          <li>Biaya Penyetoran Tunai di seluruh kantor PT Bank Kalteng: Tidak Dipungut Biaya</li>
+          <li>Penarikan Dana Tunai bagi Pemilik rekening Tabungan perorangan di bawah Rp5.000.000,- melalui counter teller: Rp15.000,-/transaksi (kecuali Pensiunan, Bendaharawan Pemerintah Daerah, Penabung Tabunganku, dana bantuan, dana hibah, nasabah yang bertransaksi pada Cabang, Capem dan kantor kas PT Bank Kalteng yang tidak memiliki mesin ATM, keperluan penyetoran kelebihan perjalanan dinas bagi Pegawai dan Pengurus PT Bank Kalteng)</li>
+          <li>Biaya Permintaan Rekening Koran di luar R/K bulanan:
+            <ul>
+              <li>&le;1 tahun: Rp5.000,-/lembar</li>
+              <li>&gt;1 tahun: Rp10.000,-/lembar</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <button class="button back-button" onclick="showPage('page-simpanan-perorangan')">
+        <i class="fas fa-arrow-left"></i> Kembali ke Simpanan Perorangan
+      </button>
+    </div>
+
+    <div id="page-tabungan-taheta-detail" class="page">
+      <h2>Tabungan Taheta</h2>
+      <div class="product-description">
+        <h3>Detail Biaya dan Saldo:</h3>
+        <ul>
+          <li>Suku Bunga per Tahun:
+            <ul>
+              <li>Nominal 0 - &lt; Rp50 Ribu: 0%</li>
+              <li>Nominal &ge; Rp50 Ribu - &lt; Rp10 juta: 1,00%</li>
+              <li>Nominal &ge; Rp10 juta - &lt; Rp50 juta: 1,00%</li>
+              <li>Nominal &ge; Rp50 juta - &lt; Rp1 Miliar: 1,25%</li>
+              <li>Nominal &ge; Rp1 Miliar: 1,50%</li>
+              <li>Bunga Tabungan yang tidak diberikan berdasarkan peraturan pemerintah: 0%</li>
+            </ul>
+          </li>
+          <li>Saldo Minimal: Rp50.000,-</li>
+          <li>Administrasi Rekening per bulan: Rp10.000,-</li>
+          <li>Administrasi Rekening Khusus Pensiunan (gaji disalurkan via PT Bank Kalteng): Rp6.750,-/bulan</li>
+          <li>Penalti Saldo Minimal per bulan (saldo &lt; Rp50.000): Rp5.000,-/bulan</li>
+          <li>Penalti Saldo Minimal per bulan (saldo &lt; Rp50.000,- selama 3 bulan berturut-turut): Rp7.500,-/bulan</li>
+          <li>Penggantian Buku (penuh/rusak/hilang): Rp7.500,-/buku</li>
+          <li>Biaya Penutupan Rekening: Rp10.000,-/rekening</li>
+          <li>Biaya Penyetoran Tunai di seluruh kantor PT Bank Kalteng: Tidak Dipungut Biaya</li>
+          <li>Penarikan Dana Tunai bagi Pemilik rekening Tabungan perorangan di bawah Rp5.000.000,- melalui counter teller: Rp15.000,-/transaksi (kecuali Pensiunan, Bendaharawan Pemerintah Daerah, Penabung Tabunganku, dana bantuan, dana hibah, nasabah yang bertransaksi pada Cabang, Capem dan kantor kas PT Bank Kalteng yang tidak memiliki mesin ATM, keperluan penyetoran kelebihan perjalanan dinas bagi Pegawai dan Pengurus PT Bank Kalteng)</li>
+          <li>Biaya Permintaan Rekening Koran di luar R/K bulanan:
+            <ul>
+              <li>&le;1 tahun: Rp5.000,-/lembar</li>
+              <li>&gt;1 tahun: Rp10.000,-/lembar</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <button class="button back-button" onclick="showPage('page-simpanan-perorangan')">
+        <i class="fas fa-arrow-left"></i> Kembali ke Simpanan Perorangan
+      </button>
+    </div>
+
+    <div id="page-tabungan-tabunganku-detail" class="page">
+      <h2>TabunganKu</h2>
+      <div class="product-description">
+        <h3>Detail Biaya dan Saldo:</h3>
+        <ul>
+          <li>Suku Bunga per Tahun:
+            <ul>
+              <li>Nominal 0 - &lt; Rp500 Ribu: 0%</li>
+              <li>Nominal &ge; Rp500 Ribu - &lt; Rp1 Juta: 0,25% (Bebas biaya administrasi)</li>
+              <li>Nominal &ge; Rp1 Juta: 1,00%</li>
+            </ul>
+          </li>
+          <li>Saldo Minimal: Rp20.000,-</li>
+          <li>Biaya Administrasi Bulanan: Bebas Biaya</li>
+          <li>Khusus untuk Tabunganku rekening penyaluran BSM yang dananya dikembalikan dan rekeningnya akan ditutup: Tidak Dipungut Biaya</li>
+          <li>Setoran Awal Minimal: Rp20.000,-</li>
+          <li>Setoran Selanjutnya Minimal: Rp10.000,-</li>
+          <li>Biaya Jika Tidak Aktif: Jika rekening tidak ada transaksi selama 6 bulan berturut-turut, akan dikenakan biaya penalti Rp 2.000 per bulan.</li>
+          <li>Penutupan Rekening: Jika saldo di bawah Rp 20.000, rekening akan ditutup otomatis oleh sistem, dan sisa saldo akan digunakan untuk biaya penutupan (biaya penutupan rekening adalah Rp 20.000).</li>
+          <li>Penarikan Tunai Minimum di Konter: Rp100.000,-</li>
+          <li>Batasan Transaksi: Penarikan tunai dan transfer hanya bisa dilakukan di cabang tempat rekening dibuka, dan penarikan dibatasi satu kali sehari.</li>
+        </ul>
+      </div>
+      <button class="button back-button" onclick="showPage('page-simpanan-perorangan')">
+        <i class="fas fa-arrow-left"></i> Kembali ke Simpanan Perorangan
+      </button>
+    </div>
+
+    <div id="page-tabungan-simpel-detail" class="page">
+      <h2>Tabungan SimPel</h2>
+      <div class="product-description">
+        <h3>Detail Biaya dan Saldo:</h3>
+        <ul>
+          <li>Rate Bunga untuk Mekanisme Perhitungan Reward: 1% (reward dihitung berdasarkan saldo harian dan diberikan pada akhir bulan Desember)</li>
+          <li>Saldo Minimal: Rp5.000,-</li>
+          <li>Biaya Penutupan Rekening: Rp5.000,-/rekening</li>
+        </ul>
+      </div>
+      <button class="button back-button" onclick="showPage('page-simpanan-perorangan')">
+        <i class="fas fa-arrow-left"></i> Kembali ke Simpanan Perorangan
+      </button>
+    </div>
+
+    <div id="page-tabungan-tabe-detail" class="page">
+      <h2>TABE (Tabungan Berkah)</h2>
+      <div class="product-description">
+        <h3>Detail Bunga:</h3>
+        <ul>
+          <li>Nominal Rp1 Juta - Rp5 Juta: 0,25%/tahun</li>
+          <li>Nominal &gt; Rp5 Juta - Rp20 Juta: 0,50%/tahun</li>
+        </ul>
+      </div>
+      <button class="button back-button" onclick="showPage('page-simpanan-perorangan')">
+        <i class="fas fa-arrow-left"></i> Kembali ke Simpanan Perorangan
+      </button>
+    </div>
+
+    <div id="page-tabungan-berjangka-detail" class="page">
+      <h2>Tabungan Berjangka</h2>
+      <div class="product-description">
+        <h3>Detail Biaya dan Saldo:</h3>
+        <ul>
+          <li>Setoran Awal (Minimum): Rp200.000,-</li>
+          <li>Setoran Bulanan (Minimum): Rp200.000,- (kelipatan Rp100.000,-)</li>
+          <li>Administrasi Bulanan: Gratis</li>
+          <li>Biaya ATM: Tidak ada ATM</li>
+          <li>Biaya Buku Tabungan: Tidak ada buku tabungan</li>
+          <li>Biaya Cetak Rekening Koran:
+            <ul>
+              <li>Transaksi di bawah satu tahun: Rp5.000,-</li>
+              <li>Transaksi di atas satu tahun: Rp10.000,-</li>
+            </ul>
+          </li>
+          <li>Suku Bunga: 3,5%/tahun</li>
+          <li>Biaya Keterlambatan Setoran per Bulan: Rp2.500,-</li>
+          <li>Penalty Penutupan Rekening sebelum Jatuh Tempo: 0,5% dari total dana</li>
+        </ul>
+      </div>
+      <button class="button back-button" onclick="showPage('page-simpanan-perorangan')">
+        <i class="fas fa-arrow-left"></i> Kembali ke Simpanan Perorangan
+      </button>
+    </div>
+
+    <div id="page-taheta-berjangka-simuda-detail" class="page">
+      <h2>TAHETA BERJANGKA SIMUDA</h2>
+      <div class="product-description">
+        <h3>Detail Biaya dan Saldo:</h3>
+        <ul>
+          <li>Setoran Awal (Minimum): Rp50.000,-</li>
+          <li>Setoran Bulanan (Minimum): Rp200.000,- (kelipatan Rp100.000,-)</li>
+          <li>Administrasi Bulanan: Gratis</li>
+          <li>Biaya ATM: Tidak ada ATM</li>
+          <li>Biaya Buku Tabungan: Tidak ada buku tabungan</li>
+          <li>Biaya Cetak Rekening Koran:
+            <ul>
+              <li>Transaksi di bawah satu tahun: Rp5.000,-</li>
+              <li>Transaksi di atas satu tahun: Rp10.000,-</li>
+            </ul>
+          </li>
+          <li>Suku Bunga: 3,5%/tahun</li>
+          <li>Biaya Keterlambatan Setoran per Bulan: Rp2.500,-</li>
+          <li>Penalty Penutupan Rekening sebelum Jatuh Tempo: 0,5% dari total dana</li>
+        </ul>
+      </div>
+      <button class="button back-button" onclick="showPage('page-simpanan-perorangan')">
+        <i class="fas fa-arrow-left"></i> Kembali ke Simpanan Perorangan
+      </button>
+    </div>
+
+    <div id="page-taheta-gift-detail" class="page">
+      <h2>TAHETA GIFT</h2>
+      <div class="product-description">
+        <h3>Detail Biaya dan Suku Bunga:</h3>
+        <ul>
+          <li>Administrasi Bulanan: Gratis</li>
+          <li>Biaya ATM: Tidak ada ATM</li>
+          <li>Biaya Buku Tabungan: Tidak ada buku tabungan</li>
+          <li>Biaya Cetak Rekening Koran:
+            <ul>
+              <li>Transaksi di bawah satu tahun: Rp5.000,-</li>
+              <li>Transaksi di atas satu tahun: Rp10.000,-</li>
+            </ul>
+          </li>
+          <li>Suku Bunga: 0,5%/tahun</li>
+          <li>Presentase Hadiah: 3% dari total penempatan dana</li>
+          <li>Penalty Penutupan Rekening sebelum Jatuh Tempo: Nilai hadiah (termasuk pajak) + Biaya Administrasi (minimal Rp100.000,- atau 1% dari total penempatan dana)</li>
+        </ul>
+      </div>
+      <button class="button back-button" onclick="showPage('page-simpanan-perorangan')">
+        <i class="fas fa-arrow-left"></i> Kembali ke Simpanan Perorangan
+      </button>
+    </div>
+
+    <div id="page-deposito-berjangka-detail" class="page">
+      <h2>Deposito Berjangka</h2>
+      <div class="product-description">
+        <h3>Detail Biaya dan Suku Bunga:</h3>
+        <ul>
+          <li>Minimal Nominal: Rp1.000.000,-</li>
+          <li>Tarif Bunga per Tahun:
+            <ul>
+              <li>1 bulan: 3,00%</li>
+              <li>3 bulan: 4,00%</li>
+              <li>6 bulan: 4,00%</li>
+              <li>12 bulan: 3,00%</li>
+              <li>24 bulan: 3,00%</li>
+            </ul>
+          </li>
+          <li>Special Rate (negosiasi) untuk deposito minimal Rp1.000.000.000,-</li>
+          <li>Tingkat Bunga Penjaminan LPS (01 Oktober 2024 - 31 Januari 2025): 4,25%</li>
+          <li>Jika suku bunga simpanan melebihi tingkat suku bunga wajar LPS, simpanan tidak dijamin.</li>
+          <li>Nasabah wajib mengisi dan menandatangani formulir/surat pernyataan tertentu untuk tarif suku bunga di atas suku bunga wajar LPS.</li>
+          <li>Special rate deposito yang akan jatuh tempo dan ingin diperpanjang memerlukan permohonan kembali, jika tidak, tarif suku bunga papan berlaku.</li>
+          <li>Persetujuan/keputusan special rate:
+            <ul>
+              <li>Pemimpin Cabang: maksimum 0,50% dari bunga papan</li>
+              <li>Pemimpin Divisi Pemasaran: maksimum 1,00% dari bunga papan (setelah persetujuan Pemimpin Cabang)</li>
+              <li>Pemimpin Divisi Treasury: maksimum 1,50% dari bunga papan (setelah persetujuan Pemimpin Cabang dan Pemimpin Divisi Pemasaran)</li>
+              <li>Direktur Pemasaran & Bisnis: maksimum 2% dari bunga papan (after persetujuan Pemimpin Cabang, Pemimpin Divisi Pemasaran dan Pemimpin Divisi Treasury)</li>
+              <li>Melebihi 2,00% dari bunga papan: Keputusan 2 orang Direksi (kecuali Direktur Kepatuhan dan Manajemen Risiko) after persetujuan dari Pemimpin Cabang, Pemimpin Divisi Pemasaran dan Pemimpin Divisi Treasury</li>
+            </ul>
+          </li>
+          <li>Keputusan pemberian special rate oleh Kantor Cabang harus dilaporkan secara tertulis kepada Direksi c.q. Departemen Dana & Jasa Divisi Pemasaran.</li>
+          <li>Penerbitan: Tidak Dipungut Biaya</li>
+          <li>Pencairan: Beban Nasabah</li>
+          <li>Penalti Pencairan Deposito Berjangka sebelum Jatuh Tempo: 0,75% dari nilai nominal</li>
+          <li>Penggantian Bilyet Deposito karena hilang/rusak: Ditiadakan</li>
+        </ul>
+      </div>
+      <button class="button back-button" onclick="showPage('page-simpanan-perorangan')">
+        <i class="fas fa-arrow-left"></i> Kembali ke Simpanan Perorangan
+      </button>
+    </div>
+
+    <div id="page-deposito-fleksibel-detail" class="page">
+      <h2>Deposito Fleksibel</h2>
+      <div class="product-description">
+        <h3>Detail Biaya dan Suku Bunga:</h3>
+        <ul>
+          <li>Dana Minimal: Rp25.000.000,- (fresh fund)</li>
+          <li>Tarif Bunga per Tahun: 2,25% (untuk 1, 3, 6, 12 bulan)</li>
+          <li>Tidak ada pemberian special rate.</li>
+          <li>Dapat dijadikan agunan kredit cash collateral.</li>
+        </ul>
+      </div>
+      <button class="button back-button" onclick="showPage('page-simpanan-perorangan')">
+        <i class="fas fa-arrow-left"></i> Kembali ke Simpanan Perorangan
+      </button>
+    </div>
+
+    <div id="page-deposito-on-call-detail" class="page">
+      <h2>Deposito On Call (DOC)</h2>
+      <div class="product-description">
+        <h3>Detail Biaya dan Suku Bunga:</h3>
+        <ul>
+          <li>Minimal Nominal: Rp1.000.000.000,-</li>
+          <li>Tarif Bunga per Tahun:
+            <ul>
+              <li>3, 5, 7, 14 hari: 2,50%</li>
+              <li>21 hari: 2,75%</li>
+            </ul>
+          </li>
+          <li>Penalti Pencairan Deposito On Call (DOC) sebelum Jatuh Tempo: 75% dari bunga yang akan diterima</li>
+        </ul>
+      </div>
+      <button class="button back-button" onclick="showPage('page-simpanan-perorangan')">
+        <i class="fas fa-arrow-left"></i> Kembali ke Simpanan Perorangan
+      </button>
+    </div>
+
+    <div id="page-kpr-umum-detail" class="page">
+      <h2>KPR Umum</h2>
+      <div class="product-description">
+        <h3>Detail Pinjaman:</h3>
+        <ul>
+          <li>Biaya Administrasi: Rp600.000,-</li>
+          <li>Besar Pinjaman: Disesuaikan dengan kemampuan cicilan Anda, maksimal 80% dari gaji atau penghasilan bulanan.</li>
+          <li>Jaminan: Tanah dan bangunan yang sudah bersertifikat hak milik (SHM).</li>
+          <li>Jangka Waktu: Maksimal 15 tahun, disesuaikan dengan usia pensiun.</li>
+          <li>Bunga: Ringan dan bersaing.</li>
+        </ul>
+        <h3>Syarat Umum:</h3>
+        <ul>
+          <li>KTP, Kartu Keluarga, NPWP, Akta Nikah (jika sudah menikah).</li>
+          <li>Slip gaji yang sudah disahkan oleh bendaharawan gaji dan rekening gaji 3 bulan terakhir.</li>
+          <li>Bukti pembayaran uang muka rumah.</li>
+          <li>Surat keterangan pengambilan rumah dari developer/pribadi.</li>
+          <li>Fotokopi blok plan rumah yang akan dibeli.</li>
+          <li>Pas foto terbaru.</li>
+          <li>Anda tidak boleh punya masalah kredit di bank lain (cek BI Checking/SID Bank Indonesia).</li>
+          <li>Bangunan yang dijaminkan wajib diasuransikan terhadap kebakaran.</li>
+        </ul>
+      </div>
+      <button class="button back-button" onclick="showPage('page-pinjaman-perorangan')">
+        <i class="fas fa-arrow-left"></i> Kembali ke Pinjaman Perorangan
+      </button>
+    </div>
+
+    <div id="page-kpr-bersubsidi-detail" class="page">
+      <h2>KPR Bersubsidi</h2>
+      <div class="product-description">
+        <h3>Detail Pinjaman:</h3>
+        <ul>
+          <li>Surat Keterangan KPR Bersubsidi: Rp200.000,-</li>
+        </ul>
+        <h3>Siapa yang Bisa Mengajukan:</h3>
+        <ul>
+          <li>Anda MBR yang belum punya rumah.</li>
+          <li>Penghasilan maksimal Rp 8 juta per bulan (jika menikah) atau Rp 7 juta (jika belum menikah).</li>
+          <li>Tidak termasuk peserta program Tapera.</li>
+        </ul>
+        <h3>Ketentuan KPR FLPP di Bank Kalteng:</h3>
+        <ul>
+          <li>Harga Rumah: Maksimal Rp 182 juta pada tahun 2025 (kecuali di Kabupaten Murung Raya dan Kabupaten Mahakam Ulu maksimal Rp 185 juta).</li>
+          <li>Uang Muka: Minimal 1% dari harga rumah, dan Anda akan dapat bantuan subsidi uang muka sebesar Rp 4 juta dari Pemerintah.</li>
+          <li>Bunga: Tetap 5% selama masa pinjaman.</li>
+          <li>Jangka Waktu: Maksimal 20 tahun, dengan batas usia maksimal 70 tahun saat kredit lunas.</li>
+          <li>Biaya-biaya: Bebas biaya asuransi dan biaya penilaian properti (appraisal). Ada biaya administrasi Rp 500.000 dan biaya provisi 0,5%.</li>
+        </ul>
+      </div>
+      <button class="button back-button" onclick="showPage('page-pinjaman-perorangan')">
+        <i class="fas fa-arrow-left"></i> Kembali ke Pinjaman Perorangan
+      </button>
+    </div>
+
+    <div id="page-jasa-giro-perusahaan-lainnya-perorangan-detail" class="page">
+      <h2>Jasa Giro (Perusahaan Lainnya - Perorangan)</h2>
+      <div class="product-description">
+        <h3>Detail Biaya dan Saldo:</h3>
+        <ul>
+          <li>Setoran Awal Giro kode 003 (perorangan dan swasta lainnya): Rp1.000.000,-</li>
+          <li>Biaya Administrasi Rekening Perorangan: Rp17.500,-/bulan</li>
+        </ul>
+      </div>
+      <button class="button back-button" onclick="showPage('page-lainnya-perorangan')">
+        <i class="fas fa-arrow-left"></i> Kembali ke Lainnya Perorangan
+      </button>
+    </div>
+
+    <div id="page-laku-pandai-detail" class="page">
+      <h2>LAKU PANDAI</h2>
+      <div class="product-description">
+        <h3>Detail Biaya dan Bunga:</h3>
+        <ul>
+          <li>Suku Bunga per Tahun:
+            <ul>
+              <li>Nominal 0 - Rp50 Ribu: 0%</li>
+              <li>Nominal &ge; Rp50 Ribu - &lt; Rp10 juta: 1,00%</li>
+              <li>Nominal &ge; Rp10 juta - &lt; Rp50 juta: 1,00%</li>
+              <li>Nominal &ge; Rp50 juta - &lt; Rp1 Miliar: 1,25%</li>
+              <li>Nominal &ge; Rp1 Miliar: 1,50%</li>
+            </ul>
+          </li>
+          <li>Untuk Agen dengan Kode Produk 206 dan Kode Buku LK.</li>
+          <li>Pembukaan Rekening BSA: Rp0,-</li>
+          <li>Pembukaan Kredit Mikro yang disetujui bank: Rp0,-</li>
+          <li>Setoran Tunai BSA: Rp0,-</li>
+          <li>Setoran Tunai Non-BSA: Rp3.000,-</li>
+          <li>Transfer Internal Rekening Bank Kalteng (Cash To Cash/Cash to Account/Account To Account): Rp5.000.000,- s.d Rp10.000.000: Rp12.500,-</li>
+          <li>Pembelian Biller: Rp5.000,-</li>
+          <li>Pembayaran: Rp5.000,-</li>
+          <li>Penarikan Tunai BSA: Rp5.000,-</li>
+          <li>Penarikan Tunai Non BSA &ge;Rp5 Juta -, &ge;Rp10 Juta -, &ge;Rp 25 Juta: Disarankan Langsung ke Bank</li>
+          <li>Penarikan Tunai menggunakan mesin EDC: Rp11.500,-</li>
+          <li>Transfer menggunakan mesin EDC: Rp11.500,-</li>
+          <li>Cek Saldo menggunakan mesin EDC: Rp9.000,-</li>
+        </ul>
+      </div>
+      <button class="button back-button" onclick="showPage('page-lainnya-perorangan')">
+        <i class="fas fa-arrow-left"></i> Kembali ke Lainnya Perorangan
+      </button>
+    </div>
+
+    <div id="page-sms-banking-detail" class="page">
+      <h2>SMS BANKING</h2>
+      <div class="product-description">
+        <h3>Detail Biaya Administrasi:</h3>
+        <ul>
+          <li>Pembayaran PDAM via SMS banking: Rp3.500,-/transaksi</li>
+          <li>Pembayaran Tagihan Kartu Halo: Rp1.500,-/transaksi</li>
+          <li>Pembelian Pulsa Telkomsel/XL/AXIS/Indosat: Rp1.500,-/transaksi</li>
+          <li>Pembelian Pulsa Tri: Rp1.500,-/transaksi</li>
+          <li>Pembelian Pulsa Smartfren: Tidak Dipungut Biaya</li>
+          <li>Pembelian Paket Data Telkomsel: Rp1.500,-/transaksi</li>
+          <li>Pembelian Paket Data Indosat: Rp1.500,-/transaksi</li>
+          <li>Pembelian Token Listrik PLN (Prepaid): Rp2.500,-/transaksi</li>
+          <li>Pembelian Token Listrik PLN (Postpaid): Rp2.500,-/transaksi</li>
+          <li>Pembayaran Tagihan Telkom/Indihome: Rp2.500,-/transaksi</li>
+          <li>Pembayaran BPJS Kesehatan: Rp2.500,-/transaksi</li>
+          <li>Transfer Antar Bank via SMS Banking: Rp6.500,-/transaksi</li>
+          <li>Penarikan via SMS Banking (antar sesama rekening Bank Kalteng): Tidak Dipungut Biaya</li>
+        </ul>
+      </div>
+      <button class="button back-button" onclick="showPage('page-lainnya-perorangan')">
+        <i class="fas fa-arrow-left"></i> Kembali ke Lainnya Perorangan
+      </button>
+    </div>
+
+    <div id="page-mobile-banking-detail" class="page">
+      <h2>MOBILE BANKING</h2>
+      <div class="product-description">
+        <h3>Detail Biaya Administrasi:</h3>
+        <ul>
+          <li>Pembelian Pulsa Telkomsel/XL/AXIS/Indosat: Rp1.500,-/transaksi</li>
+          <li>Pembelian Pulsa Tri: Rp1.500,-/transaksi</li>
+          <li>Pembelian Pulsa Smartfren: Tidak Dipungut Biaya</li>
+          <li>Pembelian Paket Data Telkomsel: Rp1.500,-/transaksi</li>
+          <li>Pembelian Paket Data Indosat: Rp1.500,-/transaksi</li>
+          <li>Pembayaran Telkomsel Postpaid (Halo): Rp1.500,-/transaksi</li>
+          <li>Pembayaran Tagihan XL: Rp2.500,-/transaksi</li>
+          <li>Pembayaran Tagihan Indosat (Matrix): Tidak Dipungut Biaya</li>
+          <li>Pembelian Token Listrik PLN (Prepaid): Rp2.500,-/transaksi</li>
+          <li>Pembayaran Tagihan Listrik PLN (Postpaid): Rp2.500,-/transaksi</li>
+          <li>Pembayaran Non Tagihan Listrik PLN: Rp2.500,-/transaksi</li>
+          <li>Top Up Gopay: Rp2.000,-/transaksi</li>
+          <li>Top Up Ovo: Rp2.000,-/transaksi</li>
+          <li>Top Up DANA: Rp2.000,-/transaksi</li>
+          <li>Top Up Shopee Pay: Rp2.000,-/transaksi (Processing Fee Shopee minimal Rp1.000,-)</li>
+          <li>Pembayaran Tagihan Telkom/Indihome: Rp2.500,-/transaksi</li>
+          <li>Pembayaran Tagihan TV Berlangganan Telkom/MNCVision: Rp2.500,-/transaksi</li>
+          <li>Pembayaran Tagihan TV Berlangganan Indovision: Tidak Dipungut Biaya</li>
+          <li>Pembayaran BPJS Kesehatan: Rp2.500,-/transaksi</li>
+          <li>Pembayaran BPJS Ketenagakerjaan: Rp2.500,-/transaksi</li>
+          <li>Pembayaran Tagihan PDAM: Rp3.500,-/transaksi</li>
+          <li>Pembayaran Tagihan OTO Kredit Motor/Mobil: Rp1.500,-/transaksi</li>
+          <li>Pembayaran PBB (Pajak Bumi Bangunan): Rp3.000,-/transaksi</li>
+          <li>Pembayaran BPHTB (Bea Perolehan Hak atas Tanah dan Bangunan): Rp3.000,-/transaksi</li>
+          <li>Pembayaran PJDL (Pajak Daerah Lainnya): Rp3.000,-/transaksi</li>
+          <li>Pembayaran Samolim: Rp3.000,-/transaksi</li>
+          <li>Setoran Pembayaran Uang Kuliah Tunggal (UKT) dengan Universitas Palangka Raya (UPR): Rp2.500,-/transaksi</li>
+          <li>Cashless Cash Withdrawal pada Betang Hanyar: Tidak Dipungut Biaya</li>
+          <li>Transfer Antar Bank via Mobile Banking: Rp2.500,-/transaksi</li>
+          <li>Transfer via Mobile Banking (antar sesama rekening Bank Kalteng): Tidak Dipungut Biaya</li>
+          <li>Penarikan via Bank Account (VA) Bank Kalteng via Mobile Banking: Tidak Dipungut Biaya</li>
+        </ul>
+      </div>
+      <button class="button back-button" onclick="showPage('page-lainnya-perorangan')">
+        <i class="fas fa-arrow-left"></i> Kembali ke Lainnya Perorangan
+      </button>
+    </div>
+
+    <div id="page-umum-perorangan-detail" class="page">
+      <h2>Umum (Berlaku Perorangan)</h2>
+      <div class="product-description">
+        <h3>Detail Biaya:</h3>
+        <ul>
+          <li>Penerbitan Surat Keterangan Bank (SKB) sebagai Batas Rekening:
+            <ul>
+              <li>&ge; Rp 1 Juta: Rp200.000,-</li>
+              <li>&lt; Rp 1 Juta: Rp150.000,-</li>
+            </ul>
+          </li>
+          <li>Surat Dukungan Bank/ Yang Dipersamakan: Rp300.000,-</li>
+          <li>Surat Keterangan Tidak Terikat sebagai Jaminan Kredit (S-MOD/GB/BPKB): Rp100.000,-</li>
+          <li>Surat Keterangan Memiliki Pinjaman/Tidak Memiliki Pinjaman: Rp100.000,-</li>
+          <li>Biaya Fotocopy/Scan Berkas Jaminan: Rp200.000,-</li>
+          <li>BEA METERAI: Sesuai ketentuan yang berlaku</li>
+          <li>Biaya Transfer Antar Bank melalui Bi-Fast: Rp2.500,-/transaksi</li>
+          <li>Biaya Tolakan Kliring Debet (Kliring Pengembalian): Rp150.000,-</li>
+        </ul>
+      </div>
+      <button class="button back-button" onclick="showPage('page-lainnya-perorangan')">
+        <i class="fas fa-arrow-left"></i> Kembali ke Lainnya Perorangan
+      </button>
+    </div>
+
+
+    <div id="page-jasa-giro-pemda-detail" class="page">
+      <h2>Jasa Giro (Pemda/Badan-badan Lainnya)</h2>
+      <div class="product-description">
+        <h3>Detail Bunga dan Saldo:</h3>
+        <ul>
+          <li>Suku Bunga per Tahun:
+            <ul>
+              <li>Nominal &lt; Rp5 juta: 0%</li>
+              <li>Nominal &ge; Rp5 juta - &lt; Rp50 juta: 0,50%</li>
+              <li>Nominal &ge; Rp50 juta - &lt; Rp100 juta: 0,50%</li>
+              <li>Nominal &ge; Rp100 juta - &lt; Rp500 juta: 0,50%</li>
+              <li>Nominal &ge; Rp500 juta - &lt; Rp5 Miliar: 1,00%</li>
+              <li>Nominal &ge; Rp5 Miliar: 1,50%</li>
+              <li>Jasa Giro yang tidak diberikan berdasarkan peraturan pemerintah: 0%</li>
+              <li>Jasa Giro khusus Kas Daerah Pemerintah Kota Palangka Raya: 2,50%</li>
+            </ul>
+          </li>
+          <li>Saldo Minimal Giro Pemerintah Daerah (Kode Produk 001): Rp0,-</li>
+          <li>Saldo Minimal Giro badan/Perusahaan Pemerintah/Giro Instansi Pemerintah (Kode Produk 002): Rp0,-</li>
+        </ul>
+      </div>
+      <button class="button back-button" onclick="showPage('page-simpanan-nonperorangan')">
+        <i class="fas fa-arrow-left"></i> Kembali ke Simpanan Non-perorangan
+      </button>
+    </div>
+
+    <div id="page-jasa-giro-perusahaan-lainnya-nonperorangan-detail" class="page">
+      <h2>Jasa Giro (Perusahaan Lainnya - Non-perorangan)</h2>
+      <div class="product-description">
+        <h3>Detail Bunga dan Saldo:</h3>
+        <ul>
+          <li>Suku Bunga per Tahun:
+            <ul>
+              <li>Nominal 0 - &lt; Rp5 juta: 0%</li>
+              <li>Nominal &ge; Rp5 juta - &lt; Rp50 juta: 0,50%</li>
+              <li>Nominal &ge; Rp50 juta - Rp100 juta: 0,50%</li>
+              <li>Nominal &ge; Rp100 juta - &lt; Rp500 juta: 0,50%</li>
+              <li>Nominal &ge; Rp500 juta - &lt; Rp5 Miliar: 1,00%</li>
+              <li>Nominal &ge; Rp5 Miliar - &lt; Rp25 Miliar: 1,50%</li>
+              <li>Nominal &ge; Rp25 Miliar: 2,75%</li>
+            </ul>
+          </li>
+          <li>Setoran Awal Giro kode 003 (perorangan dan swasta lainnya): Rp1.000.000,-</li>
+          <li>Biaya Administrasi Rekening-institusi (BUMN/Perusahaan/Institusi): Rp20.000,-/bulan</li>
+          <li>Penalti karena saldo Giro kode 003 di bawah saldo minimal.</li>
+          <li>Saldo Minimal Giro Lainnya (Kode Produk 003): Rp1 juta</li>
+        </ul>
+      </div>
+      <button class="button back-button" onclick="showPage('page-simpanan-nonperorangan')">
+        <i class="fas fa-arrow-left"></i> Kembali ke Simpanan Non-perorangan
+      </button>
+    </div>
+
+    <div id="page-jasa-giro-antar-bank-detail" class="page">
+      <h2>Jasa Giro (Antar Bank)</h2>
+      <div class="product-description">
+        <h3>Detail Bunga dan Saldo:</h3>
+        <ul>
+          <li>Suku Bunga per Tahun:
+            <ul>
+              <li>Nominal 0 - &lt; Rp5 juta: 0%</li>
+              <li>Nominal &ge; Rp5 juta - &lt; Rp50 juta: 0,25%</li>
+              <li>Nominal &ge; Rp50 juta - &lt; Rp100 juta: 0,25%</li>
+              <li>Nominal &ge; Rp100 juta - &lt; Rp500 juta: 0,25%</li>
+              <li>Nominal &ge; Rp500 juta - &lt; Rp5 Miliar: 0,50%</li>
+              <li>Nominal &ge; Rp5 Miliar - &lt; Rp25 Miliar: 1,00%</li>
+              <li>Nominal &ge; Rp25 Miliar: 1,50%</li>
+            </ul>
+          </li>
+          <li>Setoran Awal Giro kode 004 (Giro antar Bank): Rp1.000.000,-</li>
+          <li>Biaya Administrasi Rekening Antar Bank (Giro kode 004): Rp20.000,-/bulan</li>
+          <li>Biaya Rekening Pasif Giro Antar Bank (Giro kode 004): Rp12.500,-/bulan</li>
+          <li>Saldo Minimal Antar Bank (Kode Produk 004): Rp0,-</li>
+        </ul>
+      </div>
+      <button class="button back-button" onclick="showPage('page-simpanan-nonperorangan')">
+        <i class="fas fa-arrow-left"></i> Kembali ke Simpanan Non-perorangan
+      </button>
+    </div>
+
+    <div id="page-deposito-berjangka-pemda-detail" class="page">
+      <h2>Deposito Berjangka (Khusus untuk Pemerintah Daerah)</h2>
+      <div class="product-description">
+        <h3>Ketentuan Khusus:</h3>
+        <ul>
+          <li>Dapat diberikan special rate (negosiasi) sesuai ketentuan pada poin 11.</li>
+          <li>Penalti Pencairan Deposito Berjangka sebelum Jatuh Tempo: Tidak Dipungut Biaya (bunga deposito tidak diperhitungkan/dibayar)</li>
+        </ul>
+      </div>
+      <button class="button back-button" onclick="showPage('page-simpanan-nonperorangan')">
+        <i class="fas fa-arrow-left"></i> Kembali ke Simpanan Non-perorangan
+      </button>
+    </div>
+
+    <div id="page-deposito-on-call-pemda-detail" class="page">
+      <h2>Deposito On Call (DOC) (khusus untuk Pemerintah Daerah)</h2>
+      <div class="product-description">
+        <h3>Ketentuan Khusus:</h3>
+        <ul>
+          <li>Dapat diberikan special rate dengan persetujuan/keputusan Pemimpin Cabang maksimum 1,00%/tahun dari bunga papan.</li>
+        </ul>
+      </div>
+      <button class="button back-button" onclick="showPage('page-simpanan-nonperorangan')">
+        <i class="fas fa-arrow-left"></i> Kembali ke Simpanan Non-perorangan
+      </button>
+    </div>
+
+    <div id="page-deposito-doc-antar-bank-detail" class="page">
+      <h2>Deposito dan Deposito On Call (DOC) Antar Bank</h2>
+      <div class="product-description">
+        <h3>Ketentuan:</h3>
+        <ul>
+          <li>Mengikuti suku bunga pasar dan mendapat persetujuan Divisi Treasury.</li>
+        </ul>
+      </div>
+      <button class="button back-button" onclick="showPage('page-simpanan-nonperorangan')">
+        <i class="fas fa-arrow-left"></i> Kembali ke Simpanan Non-perorangan
+      </button>
+    </div>
+
+    <div id="page-tabungan-taheta-bantuan-sosial-detail" class="page">
+      <h2>Tabungan Taheta Khusus Bantuan Sosial</h2>
+      <div class="product-description">
+        <h3>Detail Biaya dan Suku Bunga:</h3>
+        <ul>
+          <li>Biaya Administrasi Bulanan Rekening Tabungan: Tidak Dipungut Biaya</li>
+          <li>Biaya Penutupan Rekening: Tidak Dipungut Biaya</li>
+          <li>Suku Bunga: 0%/tidak mendapat bunga</li>
+          <li>Saldo Minimal Tabungan: Tidak ada Saldo Minimal</li>
+        </ul>
+      </div>
+      <button class="button back-button" onclick="showPage('page-simpanan-nonperorangan')">
+        <i class="fas fa-arrow-left"></i> Kembali ke Simpanan Non-perorangan
+      </button>
+    </div>
+
+    <div id="page-pembukaan-kredit-mikro-detail" class="page">
+      <h2>Pembukaan Kredit Mikro (Laku Pandai)</h2>
+      <div class="product-description">
+        <h3>Detail Biaya:</h3>
+        <ul>
+          <li>Biaya Pembukaan Kredit Mikro yang disetujui bank: Rp0,-</li>
+        </ul>
+      </div>
+      <button class="button back-button" onclick="showPage('page-pinjaman-nonperorangan')">
+        <i class="fas fa-arrow-left"></i> Kembali ke Pinjaman Non-perorangan
+      </button>
+    </div>
+
+    <div id="page-giro-nonperorangan-detail" class="page">
+      <h2>GIRO (Non-Perorangan)</h2>
+      <div class="product-description">
+        <h3>Detail Biaya:</h3>
+        <ul>
+          <li>Buku Cek:
+            <ul>
+              <li>Isi 25 lbr BML: Rp120.000,-/buku</li>
+              <li>Isi 25 lbr non BML: Rp45.000,-/buku</li>
+              <li>Isi 10 lbr non BML: Rp30.000,-/buku</li>
+            </ul>
+          </li>
+          <li>Bilyet Giro isi 25 lembar: Rp35.000,-/buku</li>
+          <li>Pembatalan Bilyet Giro: Rp15.000,-/lembar</li>
+          <li>Biaya Penonaktifan/Pemblokiran Cek atau Bilyet Giro hilang:
+            <ul>
+              <li>Telah diisi: Rp15.000,-/warkat</li>
+              <li>Belum diisi: Rp15.000,-/laporan</li>
+            </ul>
+          </li>
+          <li>Biaya Administrasi Rekening-institusi (Pemerintah): Tidak Dipungut Biaya</li>
+          <li>Biaya Penutupan Rekening (kecuali Bendahara Pemerintah): Rp20.000,-</li>
+          <li>Biaya Permintaan Rekening Koran di luar R/K bulanan:
+            <ul>
+              <li>&le;1 tahun: Rp5.000,-/lembar</li>
+              <li>&gt;1 tahun: Rp10.000,-/lembar</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <button class="button back-button" onclick="showPage('page-lainnya-nonperorangan')">
+        <i class="fas fa-arrow-left"></i> Kembali ke Lainnya Non-perorangan
+      </button>
+    </div>
+
+    <div id="page-transfer-nonperorangan-detail" class="page">
+      <h2>TRANSFER (Non-Perorangan)</h2>
+      <div class="product-description">
+        <h3>Detail Biaya:</h3>
+        <ul>
+          <li>Transfer Antar Kantor PT Bank Kalteng:
+            <ul>
+              <li>Ke rekening Giro Perorangan dan Perusahaan, BUMD/BUMN, profit oriented, dan Perusahaan Swasta: Rp7.500,-/transaksi</li>
+              <li>Ke rekening Giro Pemda atau Perusahaan BUMD/BUMN non profit oriented: Tidak dipungut biaya</li>
+              <li>Ke rekening online selain Giro (Nasabah diarahkan melakukan setoran): Tidak dipungut biaya</li>
+            </ul>
+          </li>
+          <li>Transfer via Kliring:
+            <ul>
+              <li>Layanan Transfer Dana untuk nasabah/non Nasabah PT Bank Kalteng (Kliring Keluar): Rp2.500,-/transaksi</li>
+              <li>Layanan Kliring Warkat Debit untuk Nasabah/Non Nasabah PT Bank Kalteng: Rp5.000,-/transaksi</li>
+              <li>Layanan Pembayaran Regular untuk Nasabah/non Nasabah PT Bank Kalteng (One To Many dan Many To One): Rp5.000,-/transaksi</li>
+              <li>Layanan Penagihan Regular untuk Nasabah/Non Nasabah PT Bank Kalteng (Standing Instruction): Rp5.000,-/transaksi</li>
+              <li>Biaya Administrasi Transfer via Kliring untuk BPJS Ketenagakerjaan ke Bank lain: Tidak Dipungut Biaya</li>
+            </ul>
+          </li>
+          <li>Transfer via RTGS:
+            <ul>
+              <li>Biaya Transfer via RTGS PT Bank Kalteng: Rp30.000,-/transaksi</li>
+              <li>Biaya RTGS Anggota Focus Group: Rp15.000,-/transaksi</li>
+              <li>Penerusan Kliring Kredit yang diterima dari bank lain: Rp0,-/transaksi</li>
+              <li>Biaya Perubahan/Pembatalan (atas Permintaan Nasabah pengirim): Rp5.000,-/transaksi</li>
+            </ul>
+          </li>
+          <li>Biaya Penyaluran Dana BOS, Dana Desa (APBD/APBN) berlaku bagi pemegang rekening pada Bank Kalteng: Tidak Dipungut biaya (Sejak PKS ditandatangani)</li>
+          <li>Setoran melalui Bilyet Online: Rp25.000,-/transaksi</li>
+        </ul>
+      </div>
+      <button class="button back-button" onclick="showPage('page-lainnya-nonperorangan')">
+        <i class="fas fa-arrow-left"></i> Kembali ke Lainnya Non-perorangan
+      </button>
+    </div>
+
+    <div id="page-pembayaran-multibiller-atm-detail" class="page">
+      <h2>Pembayaran Multibiller Melalui ATM</h2>
+      <div class="product-description">
+        <h3>Detail Biaya Administrasi:</h3>
+        <ul>
+          <li>Pembayaran BPJS Kesehatan via ATM: Rp2.500,-/transaksi</li>
+          <li>Pembayaran PLN (Post Paid dan Pre Paid) via ATM: Rp3.000,-/transaksi</li>
+          <li>Pembelian Pulsa Telkomsel Postpaid (Halo): Rp1.500,-/transaksi</li>
+        </ul>
+      </div>
+      <button class="button back-button" onclick="showPage('page-lainnya-nonperorangan')">
+        <i class="fas fa-arrow-left"></i> Kembali ke Lainnya Non-perorangan
+      </button>
+    </div>
+
+    <div id="page-pembayaran-multibiller-teller-detail" class="page">
+      <h2>Pembayaran Multibiller Melalui UI Counter Teller</h2>
+      <div class="product-description">
+        <h3>Detail Biaya Administrasi:</h3>
+        <ul>
+          <li>Setoran Pajak Daerah khusus Pajak Bumi dan Bangunan (PBB): Rp2.500,-/transaksi</li>
+          <li>Setoran Pajak Daerah khusus kabupaten Katingan: Tidak Dipungut Biaya</li>
+          <li>Setoran Pajak Daerah khusus Kota Palangka Raya: Tidak Dipungut Biaya</li>
+          <li>Setoran Pajak Daerah khusus Cabang Sampit: Tidak Dipungut Biaya</li>
+          <li>Setoran Pembayaran Uang Kuliah Tunggal (UKT) dengan Universitas Palangka Raya (UPR): Rp2.500,-/transaksi</li>
+        </ul>
+      </div>
+      <button class="button back-button" onclick="showPage('page-lainnya-nonperorangan')">
+        <i class="fas fa-arrow-left"></i> Kembali ke Lainnya Non-perorangan
+      </button>
+    </div>
+
+    <div id="page-perlakuan-khusus-detail" class="page">
+      <h2>Perlakuan Khusus</h2>
+      <div class="product-description">
+        <h3>Detail Biaya Administrasi:</h3>
+        <ul>
+          <li>Penerbitan Cek antar Kantor Cabang dan Cabang Pembantu PT Bank Kalteng (Petugas wajib mengecek tanda tangan Nasabah dan mencocokan dengan specimen dan tanda tangan pada kartu tanda pengenal atau dilakukan konfirmasi dengan Cabang penerbit): Rp15.000,-/transaksi (Kecuali Cek Rekening Pemerintah Daerah)</li>
+          <li>Pemindahbukuan Bilyet Giro (BG) antar Kantor Cabang dan Cabang Pembantu (Petugas wajib mengecek tanda tangan nasabah dan mencocokan dengan specimen dan tanda tangan pada kartu tanda pengenal atau dilakukan konfirmasi dengan Cabang penerbit): Rp15.000,-/transaksi (Kecuali Cek Rekening Pemerintah Daerah dibebaskan dari biaya administrasi)</li>
+          <li>Rekening Tabungan per bulan khusus Gaji ASN Kota Palangka Raya: Rp10.000,-/bulan</li>
+          <li>Penggantian Hard Token CMS Pemerintah Daerah: Tidak Dipungut Biaya</li>
+        </ul>
+      </div>
+      <button class="button back-button" onclick="showPage('page-lainnya-nonperorangan')">
+        <i class="fas fa-arrow-left"></i> Kembali ke Lainnya Non-perorangan
+      </button>
+    </div>
+
+    <div id="page-umum-nonperorangan-detail" class="page">
+      <h2>Umum (Berlaku Non-Perorangan)</h2>
+      <div class="product-description">
+        <h3>Detail Biaya:</h3>
+        <ul>
+          <li>Penerbitan Surat Keterangan Bank (SKB) sebagai Batas Rekening:
+            <ul>
+              <li>&ge; Rp 1 Juta: Rp200.000,-</li>
+              <li>&lt; Rp 1 Juta: Rp150.000,-</li>
+            </ul>
+          </li>
+          <li>Surat Dukungan Bank/ Yang Dipersamakan: Rp300.000,-</li>
+          <li>Surat Keterangan Tidak Terikat sebagai Jaminan Kredit (S-MOD/GB/BPKB): Rp100.000,-</li>
+          <li>Surat Keterangan Memiliki Pinjaman/Tidak Memiliki Pinjaman: Rp100.000,-</li>
+          <li>Biaya Fotocopy/Scan Berkas Jaminan: Rp200.000,-</li>
+          <li>BEA METERAI: Sesuai ketentuan yang berlaku</li>
+          <li>Biaya Transfer Antar Bank melalui Bi-Fast: Rp2.500,-/transaksi</li>
+          <li>Biaya Tolakan Kliring Debet (Kliring Pengembalian): Rp150.000,-</li>
+        </ul>
+      </div>
+      <button class="button back-button" onclick="showPage('page-lainnya-nonperorangan')">
+        <i class="fas fa-arrow-left"></i> Kembali ke Lainnya Non-perorangan
+      </button>
+    </div>
+
+    <div id="page-atm-bersama" class="page">
+      <h2>ATM Bersama Perorangan</h2>
+      <div class="product-description">
+        <h4>Detail Biaya:</h4>
+        <div class="card-types">
+          <p>Biaya administrasi Kartu ATM (chip) per bulan:</p>
+          <div class="card-item">
+            <img src="kartu-silver.png" alt="Kartu ATM Silver" width="50">
+            <span>Kartu Silver: Rp5.000,-</span>
+          </div>
+          <div class="card-item">
+            <img src="kartu-gold.png" alt="Kartu ATM Gold" width="50">
+            <span>Kartu Gold: Rp6.000,-</span>
+          </div>
+          <div class="card-item">
+            <img src="kartu-platinum.png" alt="Kartu ATM Platinum" width="50">
+            <span>Kartu Platinum: Rp8.500,-</span>
+          </div>
+        </div>
+        <ul>
+          <li>Biaya permintaan Kartu ATM baru (chip): Rp15.000,-</li>
+          <li>Penggantian Kartu ATM hilang/rusak (chip): Rp20.000,-</li>
+          <li>Penggantian kartu lama (Simpeda & Taheta) menjadi kartu baru/chip (Silver, Gold, dan Platinum): Tidak Dipungut Biaya</li>
+          <li>Penggantian PIN (lupa/hilang): Rp2.500,-</li>
+          <li>Biaya informasi saldo melalui ATM PT Bank Kalteng: Bebas</li>
+          <li>Biaya informasi saldo melalui ATM Bank lain peserta jaringan ATM Bersama: Rp4.000,-</li>
+          <li>Biaya cetak mutasi melalui Atm PT Bank Kalteng: Rp1.000,-/transaksi</li>
+          <li>Penarikan tapi saldo tidak cukup: Rp3.000,-/transaksi</li>
+          <li>Biaya tarik tunai (Cash Disbursement):
+            <ul>
+              <li>ATM PT Bank Kalteng: Tidak Dipungut Biaya</li>
+              <li>ATM bank lain peserta jaringan ATM bersama: Rp7.500,-/transaksi</li>
+            </ul>
+          </li>
+          <li>Biaya transfer via ATM Bersama Antar Bank peserta jaringan ATM Bersama: Rp6.500,-/transaksi</li>
+          <li>Biaya transfer interkoneksi (Prima dan ALTO): Rp6.500,-/transaksi</li>
+          <li>Biaya Penarikan ATM Bank Kalteng (antar sesama rekening Bank Kalteng): Tidak Dipungut Biaya</li>
+          <li>Biaya pembuatan Kartu ATM baru (chip) khusus Tabungan Gaji ASN Kota Palangka Raya: Tidak Dipungut Biaya</li>
+        </ul>
+      </div>
+      <button class="button back-button" onclick="showPage('page-beranda')">
+        <i class="fas fa-arrow-left"></i> Kembali ke Beranda
+      </button>
+    </div>
+  </main>
+
+  <div class="footer">
+    <p>&copy; 2025 Bank Kalteng</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
